@@ -1,5 +1,6 @@
 package com.example.parth.logindemo;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -38,7 +39,13 @@ public class Complain extends AppCompatActivity {
     {
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url ="http://192.168.0.113:3000/complain?u_id=1&t='"+complainTitle.getText().toString()+"'&b='"+complainBody.getText().toString()+"'";
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
+
+
+        String url ="http://";
+        url+=pref.getString("ip", null);
+        url+="/complain?u_id=1&t='"+complainTitle.getText().toString()+"'&b='"+complainBody.getText().toString()+"'";
+
         final String s2test=url;
 // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,

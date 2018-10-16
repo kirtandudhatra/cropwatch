@@ -1,9 +1,14 @@
 package com.example.parth.logindemo;
 
 import android.app.ProgressDialog;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.SpannableStringBuilder;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -23,15 +28,23 @@ public class SensorData extends AppCompatActivity {
     Button btnMakeArrayRequest;
     TextView txtResponse;
     ProgressDialog pDialog;
-    String jsonResponse;
-    String urlJsonArry = "http://192.168.0.113:3000/fetch";
+    SpannableStringBuilder builder;
+
+    String urlJsonArry = "http://";
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        builder = new SpannableStringBuilder();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sensor_data);
         getSupportActionBar().setTitle("Live Data");
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
+
+        urlJsonArry+=pref.getString("ip", null);
+        urlJsonArry+="/fetch?u_id=1";
+        Toast.makeText(getApplicationContext(),urlJsonArry,Toast.LENGTH_LONG).show();
          btnMakeArrayRequest = (Button) findViewById(R.id.btnArrayRequest);
         txtResponse = (TextView) findViewById(R.id.txtResponse);
 
@@ -70,7 +83,8 @@ public class SensorData extends AppCompatActivity {
                         try {
                             // Parsing json array response
                             // loop through each json object
-                            jsonResponse = "";
+
+
                             for (int i = 0; i < response.length(); i++) {
 
                                 JSONObject data = (JSONObject) response
@@ -87,17 +101,44 @@ public class SensorData extends AppCompatActivity {
                                 else{
                                     moisture = "No";
                                 }
+                                String dt = "Date-Time:";
+                                SpannableString redSpannable= new SpannableString(dt);
+                                redSpannable.setSpan(new ForegroundColorSpan(Color.GREEN), 0, dt.length(), 0);
+                                builder.append(redSpannable);
 
+                                SpannableString t= new SpannableString(time+"\t\n");
+                                builder.append(t);
 
-                                jsonResponse += "Date-Time: " + time + "\t\n";
-                                jsonResponse += "Humidity: " + hum + "\t";
-                                jsonResponse += "Temperature: " + temp + "\t";
-                                jsonResponse += "Moisture: " + moisture + "\t\n\n";
+                                String humi = "Humidity:";
+                                SpannableString humi2= new SpannableString(humi);
+                                humi2.setSpan(new ForegroundColorSpan(Color.GREEN), 0, humi.length(), 0);
+                                builder.append(humi2);
+
+                                SpannableString h= new SpannableString(hum+"\t\n");
+                                builder.append(h);
+
+                                String tem = "Temperature:";
+                                SpannableString tem2= new SpannableString(tem);
+                                tem2.setSpan(new ForegroundColorSpan(Color.GREEN), 0, tem.length(), 0);
+                                builder.append(tem2);
+
+                                SpannableString tmp= new SpannableString(temp+"\t\n");
+                                builder.append(tmp);
+
+                                String moi = "Moisture:";
+                                SpannableString moi2= new SpannableString(moi);
+                                moi2.setSpan(new ForegroundColorSpan(Color.GREEN), 0, moi.length(), 0);
+                                builder.append(moi2);
+
+                                SpannableString mois= new SpannableString(moisture+"\t\n");
+                                builder.append(mois);
+
 
 
                             }
 
-                            txtResponse.setText(jsonResponse);
+                            txtResponse.setText(builder, TextView.BufferType.SPANNABLE);
+                            
 
                         } catch (JSONException e) {
                             e.printStackTrace();

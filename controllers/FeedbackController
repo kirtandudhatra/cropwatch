@@ -9,6 +9,7 @@ module.exports = {
 		db.query(sql, function (err, result) {
 		    
 		    if (err) throw err;
+		    res.end();
 		  
 		});
 	},

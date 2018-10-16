@@ -99,6 +99,14 @@
           }
         },
         {
+          "client_id": "918103218250-3thv77re6g68n7uf4eqte3s3756cb5m2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.parth.logindemo",
+            "certificate_hash": "298a04561377ea8dd8bab033cfef924614934536"
+          }
+        },
+        {
           "client_id": "918103218250-29okbg1bjbo6gp4jcshq370llnkvm632.apps.googleusercontent.com",
           "client_type": 3
         }

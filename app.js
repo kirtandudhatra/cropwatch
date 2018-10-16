@@ -33,7 +33,7 @@ app.get('/feedback', function(req,res){
 	feedback.insertData(req,res);
 });
 
-app.listen(3000);
+app.listen(3000,'0.0.0.0');
 
 console.log("Express app running on port 3000");
 

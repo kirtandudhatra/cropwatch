@@ -109,15 +109,39 @@
         android:id="@+id/signout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="0dp"
         android:onClick="signoutEvent"
-        android:text="Signout"
-     android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-      />
+        android:text="Signout" />
+
+    <EditText
+        android:id="@+id/ipadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="370dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="IP" />
+
+    <Button
+        android:id="@+id/ipsubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ipadd"
+        android:layout_marginStart="-121dp"
+        android:layout_toEndOf="@+id/ipadd"
+        android:onClick="saveip"
+        android:text="Submit" />
 
 
 </RelativeLayout>

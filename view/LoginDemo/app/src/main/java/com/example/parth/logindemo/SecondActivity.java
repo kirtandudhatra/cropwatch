@@ -1,12 +1,14 @@
 package com.example.parth.logindemo;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,12 +34,13 @@ public class SecondActivity extends AppCompatActivity {
     DatabaseReference reference;
     FirebaseDatabase database;
     List<String> list;
+    EditText ip;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         getSupportActionBar().setTitle("Dashboard");
-
+        ip=(EditText)findViewById(R.id.ipadd);
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
         textView=(TextView)findViewById(R.id.textView);
@@ -95,6 +98,20 @@ public class SecondActivity extends AppCompatActivity {
     {
         Intent i = new Intent(this,MotorStatus.class);
         startActivity(i);
+    }
+    public void saveip(View view)
+    {
+
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
+        SharedPreferences.Editor editor = pref.edit();
+
+        editor.putString("ip", ip.getText().toString()); // Storing string
+
+        editor.commit(); // commit changes
+
+
+
+
     }
 
 
