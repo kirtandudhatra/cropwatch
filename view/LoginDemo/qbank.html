@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bank</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+  	.a{
+	text-align: center;
+	padding: 10px;
+	background: #79c879;
+	color:#fff;
+	margin-bottom: 10px;
+}
+  </style>
+</head>
+<body>
+	<div class="container">
+		<h1 align="center"> Add Question </h1>
+	</div>
+	<div class="a" style="display: none" align="center"> Question Added</div>
+	<div class="container">
+		<form id="form1" class="form-group" method="post" >
+			<table class="table table-responsive table-bordered table-striped" align="center">
+				<tr>
+					<td>Question:</td><td><textarea  style="width: 100%" required="required" name="question" id="question"></textarea></td>
+				</tr>
+				<tr>
+					<td>Option1:</td><td><textarea  style="width: 100%" required="required" name="option1" id="option1"></textarea></td>
+				</tr>
+				<tr>
+					<td>Option2:</td><td><textarea  style="width: 100%" required="required" id="option2" name="option2"></textarea></td>
+				</tr>
+				<tr>
+					<td>Option3:</td><td><textarea  style="width: 100%" required="required" name="option3" id="option3"></textarea></td>
+				</tr>
+				<tr>
+					<td>Option4:</td><td><textarea  style="width: 100%" required="required" name="option4" id="option4"></textarea></td>
+				</tr>
+				<tr>
+					<td>Correct</td><td><input type="text" name="correct" id="correct"  style="width: 100%" required="required" ></td>
+				</tr>
+				<tr>
+					<td>Topic</td><td><input type="text" name="topic" id="topic"  style="width: 100%" required="required" ></td>
+				</tr>
+				<tr>
+					<td>Subject</td><td><input type="text" name="subject" id="subject" style="width: 100%" required="required" ></td>
+				</tr>
+				<tr>
+					<td>Branch</td><td><input type="text" name="branch" id="branch"  style="width: 100%" required="required" ></td>
+				</tr>
+				<tr>
+					<td>Level</td><td>
+						<input type="radio" name="level" id="level" required="required" value="easy">Easy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="radio" name="level" id="level" required="required" value="medium">Medium&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+						<input type="radio" name="level" id="level" required="required" value="difficult">Difficult
+					</td>
+				</tr>
+
+				
+			</table>
+			<div align="center">
+				<button type="submit">ADD</button>
+			</div>
+		</form>
+	</div>
+	<script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+
+	<script src="add.js"></script>
+</body>
+</html>

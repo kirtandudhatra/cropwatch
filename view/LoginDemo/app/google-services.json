@@ -1,0 +1,175 @@
+{
+  "project_info": {
+    "project_number": "918103218250",
+    "firebase_url": "https://cropwatchapp-5ef20.firebaseio.com",
+    "project_id": "cropwatchapp-5ef20",
+    "storage_bucket": "cropwatchapp-5ef20.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918103218250:android:0380425f4071c737",
+        "android_client_info": {
+          "package_name": "com.cropplantexample.parth.cropwatchapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918103218250-062cl18hihj4ushscbmnpb09npbk6rnb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cropplantexample.parth.cropwatchapp",
+            "certificate_hash": "6f71bdf25c8f6beea94b0ae90d1cbebcc6230997"
+          }
+        },
+        {
+          "client_id": "918103218250-oqqthrs46s0mlrajhho328a5acjdjd7o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cropplantexample.parth.cropwatchapp",
+            "certificate_hash": "5f1ec9a1a63781f73edcee6ca367c565c4aac20d"
+          }
+        },
+        {
+          "client_id": "918103218250-ap2dh2p2t90u4nkfd6e2htodroffhbjh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cropplantexample.parth.cropwatchapp",
+            "certificate_hash": "d03464ba9983f9dadbb9ed5aea5a3b3bd1deec48"
+          }
+        },
+        {
+          "client_id": "918103218250-928s57slp9pnjnmcs7tpmnfclahtaser.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cropplantexample.parth.cropwatchapp",
+            "certificate_hash": "0dda0c90b7c8418940d74e10d59842a00790a1aa"
+          }
+        },
+        {
+          "client_id": "918103218250-4r1dfu9u949mv0qbbmpobb55o0dn1vcl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cropplantexample.parth.cropwatchapp",
+            "certificate_hash": "58f0c9d0443f4b700c88626f03cf251e5f854bc8"
+          }
+        },
+        {
+          "client_id": "918103218250-29okbg1bjbo6gp4jcshq370llnkvm632.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHUGmcZfCKIxWhUC0BYXxlvi5XmBNa6D8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918103218250-29okbg1bjbo6gp4jcshq370llnkvm632.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918103218250:android:8b3860962bd3c675",
+        "android_client_info": {
+          "package_name": "com.example.parth.logindemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918103218250-101pop9s41ipu867oki53jg1fpop791m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.parth.logindemo",
+            "certificate_hash": "58f0c9d0443f4b700c88626f03cf251e5f854bc8"
+          }
+        },
+        {
+          "client_id": "918103218250-29okbg1bjbo6gp4jcshq370llnkvm632.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHUGmcZfCKIxWhUC0BYXxlvi5XmBNa6D8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918103218250-29okbg1bjbo6gp4jcshq370llnkvm632.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918103218250:android:d8c30603ba13a90b",
+        "android_client_info": {
+          "package_name": "com.paras.weatherwidget"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918103218250-64nrrussknu83ndte5b8544vnrodgi1e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.paras.weatherwidget",
+            "certificate_hash": "d03464ba9983f9dadbb9ed5aea5a3b3bd1deec48"
+          }
+        },
+        {
+          "client_id": "918103218250-29okbg1bjbo6gp4jcshq370llnkvm632.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHUGmcZfCKIxWhUC0BYXxlvi5XmBNa6D8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918103218250-29okbg1bjbo6gp4jcshq370llnkvm632.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
