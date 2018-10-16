@@ -4,7 +4,7 @@ module.exports = {
 	
 	insertData: function (req,res){
 
-		var sql = `INSERT INTO data (u_id,humidity_data,moisture_data,temperature_data) VALUES (${req.query.u_id},${req.query.h},${req.query.m},${req.query.t})`;
+		var sql = `INSERT INTO feedback (f_uid,f_title,f_body) VALUES (${req.query.u_id},${req.query.t},${req.query.b})`;
 		  	
 		db.query(sql, function (err, result) {
 		    
@@ -15,7 +15,7 @@ module.exports = {
 
 	fetchData: function (req,res){
 
-		var sql = `SELECT * FROM data where u_id = ${req.query.u_id} ORDER BY d_id DESC LIMIT 10`;
+		var sql = `SELECT * FROM feedback`;
 	  	db.query(sql, function (err, rows, fields) {
 
 		    if (err) throw err;
