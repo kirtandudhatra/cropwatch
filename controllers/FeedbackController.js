@@ -11,7 +11,7 @@ module.exports = {
 		    if (err) throw err;
 		    res.end();
 		  
-		});
+		}); 
 	},
 
 	fetchData: function (req,res){

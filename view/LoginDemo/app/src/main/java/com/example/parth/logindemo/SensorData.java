@@ -103,7 +103,7 @@ public class SensorData extends AppCompatActivity {
                                 }
                                 String dt = "Date-Time:";
                                 SpannableString redSpannable= new SpannableString(dt);
-                                redSpannable.setSpan(new ForegroundColorSpan(Color.GREEN), 0, dt.length(), 0);
+                                redSpannable.setSpan(new ForegroundColorSpan(Color.RED), 0, dt.length(), 0);
                                 builder.append(redSpannable);
 
                                 SpannableString t= new SpannableString(time+"\t\n");
@@ -119,7 +119,7 @@ public class SensorData extends AppCompatActivity {
 
                                 String tem = "Temperature:";
                                 SpannableString tem2= new SpannableString(tem);
-                                tem2.setSpan(new ForegroundColorSpan(Color.GREEN), 0, tem.length(), 0);
+                                tem2.setSpan(new ForegroundColorSpan(Color.BLUE), 0, tem.length(), 0);
                                 builder.append(tem2);
 
                                 SpannableString tmp= new SpannableString(temp+"\t\n");
@@ -127,10 +127,10 @@ public class SensorData extends AppCompatActivity {
 
                                 String moi = "Moisture:";
                                 SpannableString moi2= new SpannableString(moi);
-                                moi2.setSpan(new ForegroundColorSpan(Color.GREEN), 0, moi.length(), 0);
+                                moi2.setSpan(new ForegroundColorSpan(Color.MAGENTA), 0, moi.length(), 0);
                                 builder.append(moi2);
 
-                                SpannableString mois= new SpannableString(moisture+"\t\n");
+                                SpannableString mois= new SpannableString(moisture+"\t\n\n\n");
                                 builder.append(mois);
 
 
@@ -138,6 +138,7 @@ public class SensorData extends AppCompatActivity {
                             }
 
                             txtResponse.setText(builder, TextView.BufferType.SPANNABLE);
+                            builder.clear();
                             
 
                         } catch (JSONException e) {
