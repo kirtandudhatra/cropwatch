@@ -16,7 +16,7 @@ module.exports = {
 
 	fetchData: function (req,res){
 
-		var sql = `SELECT * FROM feedback`;
+		var sql = `SELECT * FROM feedback INNER JOIN users ON feedback.f_uid = users.u_id`;
 	  	db.query(sql, function (err, rows, fields) {
 
 		    if (err) throw err;

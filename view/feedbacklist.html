@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Admin- Feedback</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-sm bg-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <h2 style="color:#fff"><a href="/admindashboard" style="color:#fff">CropWatch</a></h2>
+    </li>
+    </li>
+  </ul>
+</nav>
+<br><br><br>
+<div class="container">
+  <h2>Feedback list</h2>
+  <p>Feedbacks from all users will be displayed here.</p> 
+  <div ng-app="myApp" ng-controller="customersCtrl">           
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Contact No.</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in names">
+        <td>{{ x.f_title }}</td>
+        <td>{{ x.f_body }}</td>
+        <td>{{ x.u_name }}</td>
+        <td>{{ x.u_email }}</td>
+        <td>{{ x.u_mobileno }}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope, $http) {
+   $http.get("/getfeedback")
+   .then(function (response) {$scope.names = response.data;});
+});
+</script>
+</body>
+</html>

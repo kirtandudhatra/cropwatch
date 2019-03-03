@@ -16,7 +16,7 @@ module.exports = {
 
 	fetchData: function (req,res){
 
-		var sql = `SELECT * FROM complain`;
+		var sql = `SELECT * FROM complain INNER JOIN users ON complain.c_uid = users.u_id`;
 	  	db.query(sql, function (err, rows, fields) {
 
 		    if (err) throw err;

@@ -6,6 +6,7 @@ var sensordata = require('./controllers/SensorDataController');
 var admindata = require('./controllers/AdminController');
 var complain = require('./controllers/ComplainController');
 var feedback = require('./controllers/FeedbackController');
+var motordata = require('./controllers/MotorController');
 
 
 app.get('/admin',function(req,res){
@@ -26,7 +27,30 @@ app.get('/adduser',function(req,res){
 	admindata.addUser(req,res);
 	 
 });
-
+app.get('/userlist',function(req,res){
+	res.sendFile(path.join(__dirname+"/view/users.html"));
+	 
+});
+app.get('/getusers',function(req,res){
+	admindata.getUsers(req,res);
+	 
+});
+app.get('/allfeedbacks',function(req,res){
+	res.sendFile(path.join(__dirname+"/view/feedbacklist.html"));
+	 
+});
+app.get('/allcomplaints',function(req,res){
+	res.sendFile(path.join(__dirname+"/view/complaintlist.html"));
+	 
+});
+app.get('/getfeedback',function(req,res){
+	feedback.fetchData(req,res);
+	 
+});
+app.get('/getcomplains',function(req,res){
+	complain.fetchData(req,res);
+	 
+});
 app.get('/send',function(req,res){
 	
 	sensordata.insertData(req,res);
@@ -52,6 +76,18 @@ app.get('/complain', function(req,res){
 app.get('/feedback', function(req,res){
 
 	feedback.insertData(req,res);
+});
+app.get('/motoron', function(req,res){
+
+	motordata.turnOn(req,res);
+});
+app.get('/motoroff', function(req,res){
+
+	motordata.turnOff(req,res);
+});
+app.get('/motorstatus', function(req,res){
+
+	motordata.getStatus(req,res);
 });
 
 app.listen(3000,'0.0.0.0');

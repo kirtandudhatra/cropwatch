@@ -10,12 +10,26 @@ module.exports = {
 			    
 			    if (err) throw err;
 
-			    res.write("<script>alert('User Added!!');window.location.replace('/admindashboard');</script>")
+			    res.write("<script>alert('User Added!!');window.location.replace('/admindashboard');</script>");
 			    
 				res.end();
 			  
 		});
 
+		},
+
+		getUsers: function (req,res){
+
+				var sql = `SELECT * FROM users`;
+	  			db.query(sql, function (err, rows, fields) {
+
+			    if (err) throw err;
+			    
+			    res.writeHead(200, { 'Content-Type': 'application/json'});
+			    res.end(JSON.stringify(rows));
+			    res.end();
+
+		});
 		}
 
 };
